@@ -1,4 +1,4 @@
-# Variables
+# VARIABLES
 
 name = "cRondito"
 user_id = 420202269
@@ -6,7 +6,7 @@ progress = 0.75
 exp = 60
 verified = True
 
-# Data Types
+# DATA TYPES
 
 # Int
 year = 2023
