@@ -15,7 +15,7 @@ age = 32
 pi = 3.14159
 meal_cost = 12.99
 # String
-message = "good nite"
+message = "sup brah"
 user = '@sonnynomnom'
 # Boolean
 late_to_class = False
