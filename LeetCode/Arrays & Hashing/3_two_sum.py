@@ -9,7 +9,13 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        return [1]  # add logic here
+        num_dict = {}
+        for i, num in enumerate(nums):
+            num_dict[i] = num
+        for i in range(len(num_dict)):
+            for j in range(i + 1, len(num_dict)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
 
 
 solution = Solution()
