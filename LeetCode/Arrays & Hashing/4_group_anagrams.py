@@ -13,11 +13,11 @@ class Solution:
 
 solution = Solution()
 
-result1 = solution.twoSum(["eat", "tea", "tan", "ate", "nat", "bat"])
+result1 = solution.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
 print(result1)  # [["bat"],["nat","tan"],["ate","eat","tea"]]
 
-result2 = solution.twoSum([""])
+result2 = solution.groupAnagrams([""])
 print(result2)  # [[""]]
 
-result3 = solution.twoSum(["a"])
+result3 = solution.groupAnagrams(["a"])
 print(result3)  # [["a"]]
