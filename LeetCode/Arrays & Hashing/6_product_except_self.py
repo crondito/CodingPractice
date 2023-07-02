@@ -7,11 +7,15 @@
 
 
 from typing import List
+import math
 
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        return []
+        result = []
+        for i in range(len(nums)):
+            result.append(math.prod(nums[:i] + nums[i + 1 :]))
+        return result
 
 
 solution = Solution()
