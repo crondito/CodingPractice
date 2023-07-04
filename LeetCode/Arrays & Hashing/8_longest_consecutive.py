@@ -8,7 +8,6 @@ from typing import List
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         num_set = set(nums)
-        print(num_set)
         longest_streak = 0
 
         for num in num_set:
