@@ -11,20 +11,17 @@ from typing import List
 class Solution:
     def check_parentheses(self, lst: List[str]):
         stack = []
-        opening_chars = "({["
-        closing_chars = ")}]"
         matching_chars = {")": "(", "]": "[", "}": "{"}
 
         for element in lst:
-            if element in opening_chars:
+            if element in matching_chars.values():
                 stack.append(element)
-            elif element in closing_chars:
-                if len(stack) == 0 or stack[-1] != matching_chars[element]:
+            elif element in matching_chars.keys():
+                if not stack or stack[-1] != matching_chars[element]:
                     return False
-                else:
-                    stack.pop()
+                stack.pop()
 
-        return len(stack) == 0
+        return not stack
 
     def isValid(self, s: str) -> bool:
         return self.check_parentheses(list(s))
