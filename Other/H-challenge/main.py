@@ -29,14 +29,16 @@ def sum_of_squares(nums):
         return nums[0] ** 2 + sum_of_squares(nums[1:])
 
 
+def process_case():
+    num_integers = int(sys.stdin.readline().strip())
+    integers = list(map(int, sys.stdin.readline().strip().split()[:num_integers]))
+    result = sum_of_squares(integers)
+    return result
+
+
 def main():
     num_test_cases = int(sys.stdin.readline().strip())
-    results = []
-    for _ in range(num_test_cases):
-        num_integers = int(sys.stdin.readline().strip())
-        integers = list(map(int, sys.stdin.readline().strip().split()[:num_integers]))
-        result = sum_of_squares(integers)
-        results.append(result)
+    results = list(map(lambda _: process_case(), range(num_test_cases)))
 
     list(map(print, results))
 
