@@ -1,6 +1,3 @@
-import sys
-
-
 def sum_of_squares(nums):
     if not nums:
         return 0
@@ -11,13 +8,13 @@ def sum_of_squares(nums):
 
 
 def process_case():
-    num_integers = int(sys.stdin.readline().strip())
-    integers = list(map(int, sys.stdin.readline().strip().split()[:num_integers]))
+    num_integers = int(input().strip())
+    integers = list(map(int, input().strip().split()[:num_integers]))
     return sum_of_squares(integers)
 
 
 def main():
-    num_test_cases = int(sys.stdin.readline().strip())
+    num_test_cases = int(input().strip())
     results = list(map(lambda _: process_case(), range(num_test_cases)))
     list(map(print, results))
 
