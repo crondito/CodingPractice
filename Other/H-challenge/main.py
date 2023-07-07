@@ -17,9 +17,29 @@
 # Note 5: Use standard libraries
 # Note 6: Do not declare global variables
 
+import sys
+
+
+def sum_of_squares(nums):
+    if not nums:
+        return 0
+    elif nums[0] < 0:
+        return sum_of_squares(nums[1:])
+    else:
+        return nums[0] ** 2 + sum_of_squares(nums[1:])
+
 
 def main():
-    ...
+    num_test_cases = int(sys.stdin.readline().strip())
+    results = []
+    for _ in range(num_test_cases):
+        num_integers = int(sys.stdin.readline().strip())
+        integers = list(map(int, sys.stdin.readline().strip().split()[:num_integers]))
+        result = sum_of_squares(integers)
+        results.append(result)
+
+    for result in results:
+        print(result)
 
 
 if __name__ == "__main__":
