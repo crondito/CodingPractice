@@ -38,8 +38,7 @@ def main():
         result = sum_of_squares(integers)
         results.append(result)
 
-    for result in results:
-        print(result)
+    list(map(print, results))
 
 
 if __name__ == "__main__":
