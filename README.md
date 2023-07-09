@@ -1,2 +1,2 @@
-# PythonPractice
-This repository is where I practice Python with different exercises found on the web.
+# CodingPractice
+This is a repository I use to practice coding exercises I find online.
