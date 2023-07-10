@@ -9,7 +9,7 @@ import re
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        changed_s = re.sub(r"\W+", "", s.lower())
+        changed_s = re.sub(r"[\W_]+", "", s.lower())
         return changed_s == changed_s[::-1]
 
 
@@ -23,3 +23,6 @@ print(result2)  # False
 
 result3 = solution.isPalindrome(" ")
 print(result3)  # True
+
+result4 = solution.isPalindrome("ab_a")
+print(result4)  # True
