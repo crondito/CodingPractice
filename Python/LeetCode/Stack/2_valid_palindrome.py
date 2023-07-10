@@ -4,10 +4,13 @@
 #
 # Given a string s, return true if it is a palindrome, or false otherwise.
 
+import re
+
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        return False  # TO DO
+        changed_s = re.sub(r"\W+", "", s.lower())
+        return changed_s == changed_s[::-1]
 
 
 solution = Solution()
