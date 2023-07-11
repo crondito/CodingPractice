@@ -8,8 +8,9 @@
 
 from typing import List
 
+
 class Solution:
-    def check_parentheses(self, lst: List[str]):
+    def check_parentheses(self, lst: List[str]) -> bool:
         stack = []
         matching_chars = {")": "(", "]": "[", "}": "{"}
 
@@ -25,9 +26,8 @@ class Solution:
 
     def isValid(self, s: str) -> bool:
         return self.check_parentheses(list(s))
-    
-    
-    
+
+
 solution = Solution()
 
 result1 = solution.isValid("()")
